@@ -1,5 +1,8 @@
 puts 'creating seed.'
 
+User.destroy_all
+Product.destroy_all
+
 5.times do |i|
     product = Product.create(
         name: Faker::Company.name,
