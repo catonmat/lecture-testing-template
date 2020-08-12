@@ -1,7 +1,14 @@
-id_1:
-  name: 'product 1'
-  tagline: 'some tagline'
+<% 1.upto(5) do |i| %>
+id_<%= i %>:
+  name: <%= Faker::Company.name %>
+  tagline: <%= Faker::Company.catch_phrase %>
+<% end %>
 
-id_2:
-  name: 'product 2'
-  tagline: 'tagline'
+
+# id_1:
+#   name: 'product 1'
+#   tagline: 'some tagline'
+
+# id_2:
+#   name: 'product 2'
+#   tagline: 'tagline'
