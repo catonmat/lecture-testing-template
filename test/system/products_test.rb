@@ -15,8 +15,8 @@ class ProductsTest < ApplicationSystemTestCase
     visit '/products/new'
     save_and_open_screenshot
     # step 3: user fills and submits new product form
-    fill_in 'product_name', with: 'my great product'
-    fill_in 'product_tagline', with: 'some catchy phrase'
+    fill_in 'product_name', with: 'Le Wagon'
+    fill_in 'product_tagline', with: 'Change your life: learn to code.'
     save_and_open_screenshot
     click_on 'Create Product'
     
