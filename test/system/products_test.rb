@@ -13,10 +13,12 @@ class ProductsTest < ApplicationSystemTestCase
     login_as users(:id_1)
     # step 2: user visit 'new product' page
     visit '/products/new'
+    save_and_open_screenshot
     # step 3: user fills and submits new product form
     fill_in 'product_name', with: 'Le Wagon'
     fill_in 'product_tagline', with: 'Change your life: learn to code.'
     click_on 'Create Product'
+    save_and_open_screenshot
     
     assert_equal root_path, page.current_path
     assert_text 'Change your life: learn to code.'
